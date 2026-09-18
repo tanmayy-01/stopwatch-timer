@@ -1,9 +1,210 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Platform } from 'react-native';
 
 export const styles = StyleSheet.create({
-    container: {
-        flex:1,
-        justifyContent:'center',
-        alignItems:'center'
-    }
-})
+  safeArea: {
+    flex: 1,
+    backgroundColor: '#000000',
+  },
+  container: {
+    flex: 1,
+    backgroundColor: '#000000',
+    paddingHorizontal: 24,
+  },
+  pickerSection: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: '15%',
+    marginBottom: 30,
+  },
+  pickerRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 160,
+    width: '100%',
+  },
+  pickerColumn: {
+    width: 70,
+    height: 160,
+  },
+  pickerItem: {
+    height: 52,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  pickerText: {
+    color: '#444444',
+    fontSize: 32,
+    fontWeight: '500',
+    fontVariant: ['tabular-nums'],
+  },
+  pickerTextSelected: {
+    color: '#ffffff',
+    fontSize: 38,
+    fontWeight: '700',
+    fontVariant: ['tabular-nums'],
+  },
+  pickerColon: {
+    color: '#ffffff',
+    fontSize: 32,
+    fontWeight: '700',
+    paddingHorizontal: 8,
+    alignSelf: 'center',
+  },
+  sectionHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: 10,
+    marginBottom: 16,
+    paddingHorizontal: 4,
+  },
+  sectionTitle: {
+    color: '#888888',
+    fontSize: 15,
+    fontWeight: '400',
+  },
+  addButtonText: {
+    color: '#e94343',
+    fontSize: 15,
+    fontWeight: '600',
+  },
+  timersList: {
+    flex: 1,
+    marginBottom: 110,
+  },
+  timerCard: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    backgroundColor: '#141416',
+    borderRadius: 16,
+    paddingVertical: 18,
+    paddingHorizontal: 20,
+    marginBottom: 12,
+    borderWidth: 1,
+    borderColor: 'transparent',
+  },
+  timerCardSelected: {
+    backgroundColor: '#191314',
+    borderColor: '#e94343',
+  },
+  timerCardName: {
+    color: '#ffffff',
+    fontSize: 16,
+    fontWeight: '500',
+  },
+  timerCardNameSelected: {
+    color: '#e94343',
+    fontWeight: '600',
+  },
+  timerCardDuration: {
+    color: '#a0a0a5',
+    fontSize: 16,
+    fontVariant: ['tabular-nums'],
+  },
+  timerCardDurationSelected: {
+    color: '#e94343',
+    fontWeight: '600',
+  },
+  bottomControls: {
+    position: 'absolute',
+    bottom: 28,
+    left: 0,
+    right: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  // Modal Styles
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.75)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: 24,
+  },
+  modalContent: {
+    width: '100%',
+    backgroundColor: '#1c1c1e',
+    borderRadius: 20,
+    padding: 24,
+    borderWidth: 1,
+    borderColor: '#2c2c2e',
+  },
+  modalTitle: {
+    color: '#ffffff',
+    fontSize: 20,
+    fontWeight: '700',
+    marginBottom: 20,
+    textAlign: 'center',
+  },
+  inputLabel: {
+    color: '#8e8e93',
+    fontSize: 13,
+    marginBottom: 8,
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
+  },
+  textInput: {
+    backgroundColor: '#2c2c2e',
+    color: '#ffffff',
+    fontSize: 16,
+    borderRadius: 10,
+    paddingHorizontal: 14,
+    paddingVertical: 12,
+    marginBottom: 18,
+  },
+  durationInputsRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 24,
+  },
+  durationInputGroup: {
+    flex: 1,
+    alignItems: 'center',
+    marginHorizontal: 4,
+  },
+  durationInput: {
+    backgroundColor: '#2c2c2e',
+    color: '#ffffff',
+    fontSize: 18,
+    fontWeight: '600',
+    borderRadius: 10,
+    paddingVertical: 10,
+    textAlign: 'center',
+    width: '100%',
+    fontVariant: ['tabular-nums'],
+  },
+  durationUnitLabel: {
+    color: '#8e8e93',
+    fontSize: 12,
+    marginTop: 4,
+  },
+  modalActions: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  modalButton: {
+    flex: 1,
+    paddingVertical: 14,
+    borderRadius: 12,
+    alignItems: 'center',
+    marginHorizontal: 6,
+  },
+  cancelButton: {
+    backgroundColor: '#2c2c2e',
+  },
+  cancelButtonText: {
+    color: '#ffffff',
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  saveButton: {
+    backgroundColor: '#e94343',
+  },
+  saveButtonText: {
+    color: '#ffffff',
+    fontSize: 16,
+    fontWeight: '600',
+  },
+});

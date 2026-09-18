@@ -22,6 +22,14 @@ const BottomTabNavigator = () => {
       <Tab.Screen
         name="Stopwatch"
         component={Stopwatch}
+        listeners={({ navigation }) => ({
+          tabPress: () => {
+            navigation.navigate('Stopwatch', {
+              timerMode: false,
+              initialSeconds: 0,
+            });
+          },
+        })}
         options={{
           tabBarIcon: ({ size, color }) => (
             <Ionicons name="stopwatch-outline" size={size} color={color} />
