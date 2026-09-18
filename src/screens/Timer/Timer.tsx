@@ -30,9 +30,8 @@ const formatTimerDuration = (h: number, m: number, s: number): string => {
 const Timer = () => {
   const navigation = useNavigation<any>();
 
-  // Selected time state (default to 00:21:00 matching screenshot 1)
   const [hours, setHours] = useState<number>(0);
-  const [minutes, setMinutes] = useState<number>(21);
+  const [minutes, setMinutes] = useState<number>(0);
   const [seconds, setSeconds] = useState<number>(0);
 
   // Saved timers list (initially empty)
@@ -43,7 +42,7 @@ const Timer = () => {
   const [isAddModalVisible, setIsAddModalVisible] = useState<boolean>(false);
   const [newTimerName, setNewTimerName] = useState<string>('');
   const [modalHours, setModalHours] = useState<string>('0');
-  const [modalMinutes, setModalMinutes] = useState<string>('21');
+  const [modalMinutes, setModalMinutes] = useState<string>('0');
   const [modalSeconds, setModalSeconds] = useState<string>('0');
 
   // FlatList refs for programmatic scrolling
