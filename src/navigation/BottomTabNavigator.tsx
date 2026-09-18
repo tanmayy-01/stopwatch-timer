@@ -12,7 +12,7 @@ const BottomTabNavigator = () => {
       screenOptions={{
         headerShown: false,
         tabBarStyle: {
-          backgroundColor: '#090909',
+          backgroundColor: '#222222',
           borderTopColor: '#222222',
         },
         tabBarActiveTintColor: '#ffffff',
