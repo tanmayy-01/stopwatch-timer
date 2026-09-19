@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import {
   View,
   Text,
@@ -15,11 +15,8 @@ import { useNavigation } from '@react-navigation/native';
 import { styles } from './Timer.styles';
 import CustomIconButton from '../../component/CustomIconButton';
 import { IconName, SavedTimer } from '../../types';
+import { HOURS_DATA, ITEM_HEIGHT, MINUTES_DATA, SECONDS_DATA } from '../../constants';
 
-const ITEM_HEIGHT = 52;
-const HOURS_DATA = Array.from({ length: 24 }, (_, i) => i);
-const MINUTES_DATA = Array.from({ length: 60 }, (_, i) => i);
-const SECONDS_DATA = Array.from({ length: 60 }, (_, i) => i);
 
 const pad2 = (n: number): string => n.toString().padStart(2, '0');
 
@@ -34,7 +31,6 @@ const Timer = () => {
   const [minutes, setMinutes] = useState<number>(0);
   const [seconds, setSeconds] = useState<number>(0);
 
-  // Saved timers list (initially empty)
   const [savedTimers, setSavedTimers] = useState<SavedTimer[]>([]);
   const [selectedTimerId, setSelectedTimerId] = useState<string | null>(null);
 
@@ -45,7 +41,7 @@ const Timer = () => {
   const [modalMinutes, setModalMinutes] = useState<string>('0');
   const [modalSeconds, setModalSeconds] = useState<string>('0');
 
-  // FlatList refs for programmatic scrolling
+  // FlatList refs
   const hoursListRef = useRef<FlatList>(null);
   const minutesListRef = useRef<FlatList>(null);
   const secondsListRef = useRef<FlatList>(null);

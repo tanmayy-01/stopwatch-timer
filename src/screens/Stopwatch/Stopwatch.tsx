@@ -3,10 +3,8 @@ import {
   View,
   Text,
   FlatList,
-  TouchableOpacity,
 } from 'react-native';
-import { useRoute, useNavigation, useFocusEffect } from '@react-navigation/native';
-import Ionicons from '@react-native-vector-icons/ionicons';
+import { useRoute, useNavigation } from '@react-navigation/native';
 import { styles } from './Stopwatch.styles';
 import CustomIconButton from '../../component/CustomIconButton';
 import { IconName, LapItem, TimerStatus } from '../../types';
